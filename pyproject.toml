@@ -1,0 +1,20 @@
+[tool.poetry]
+name = "duboisterminal"
+version = "0.1.0"
+description = ""
+authors = ["Artic42 <main@artic42.com>"]
+license = "MIT License"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+articlib = "^0.2.3"
+requests = "^2.32.3"
+
+
+[tool.poetry.group.dev.dependencies]
+flake8 = "^7.1.1"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
