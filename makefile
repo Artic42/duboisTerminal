@@ -1,13 +1,15 @@
 BINARIES = bin
 SOURCES = src
 
-all: help connectDevice ejectDevice info
+all: help connectDevice ejectDevice info createKeys deleteKeys
 
 
 help: $(BINARIES)/help
 connectDevice: $(BINARIES)/connectDevice
 ejectDevice: $(BINARIES)/ejectDevice
 info: $(BINARIES)/info
+createKeys: $(BINARIES)/createKeys
+deleteKeys: $(BINARIES)/deleteKeys
 
 $(BINARIES)/help: $(SOURCES)/help.c
 	gcc $(SOURCES)/help.c -o $(BINARIES)/help
@@ -23,3 +25,11 @@ $(BINARIES)/ejectDevice: $(SOURCES)/ejectDevice.c
 
 $(BINARIES)/info: $(SOURCES)/info.c
 	gcc $(SOURCES)/info.c -o $(BINARIES)/info
+
+$(BINARIES)/createKeys: $(SOURCES)/createKeys.c
+	gcc $(SOURCES)/createKeys.c -o $(BINARIES)/createKeys
+	cp $(BINARIES)/createKeys $(BINARIES)/crearLlaves
+
+$(BINARIES)/deleteKeys: $(SOURCES)/deleteKeys.c
+	gcc $(SOURCES)/deleteKeys.c -o $(BINARIES)/deleteKeys
+	cp $(BINARIES)/deleteKeys $(BINARIES)/borrarCodigos
