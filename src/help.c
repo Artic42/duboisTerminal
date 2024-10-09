@@ -9,7 +9,6 @@ int main (void)
     printf("startJammer:    It will start jamming all radio signals in the building\n");
     printf("stopJammer:     It will stop jamming all radio signals in the building\n");
     printf("radioCheck:     Checks that there are no active radio blockers\n");
-    printf("weaponDetector: Checks if smart weapons such as remote bombs, timed devices, or turrets have been armed\n");
     printf("alarm:          Sounds the casino alarm\n");
     printf("connectDevice:  Connects the USB device inserted into the computer\n");
     printf("ejectDevice:    Disconnects the USB device inserted into the computer\n");
@@ -21,7 +20,6 @@ int main (void)
     printf("iniciarJammer: Iniciará el bloqueo de todas las señales de radio en el edificio\n");
     printf("detenerJammer: Detendrá el bloqueo de todas las señales de radio en el edificio\n");
     printf("radioCheck:    Comprueba que no existen bloqueadores de radio activos\n");
-    printf("detectorArmas: Comprueba si armas inteligentes como bombas remotas, temporizadas o torretas han sido armadas\n");
     printf("alarma:        Hace sonar la alarma del casino\n");
     printf("conectarDisp:  Conecta el dispositivo USB insertado en el ordenador\n");
     printf("extraerDisp:   Desconecta el dispositivo USB inserado en el ordenador\n");
