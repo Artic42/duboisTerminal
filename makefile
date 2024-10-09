@@ -1,5 +1,6 @@
 BINARIES = bin
 SOURCES = src
+SCRIPTS = script
 
 all: help connectDevice ejectDevice info createKeys deleteKeys
 
@@ -10,18 +11,21 @@ ejectDevice: $(BINARIES)/ejectDevice
 info: $(BINARIES)/info
 createKeys: $(BINARIES)/createKeys
 deleteKeys: $(BINARIES)/deleteKeys
+install:
+	cp $(BINARIES)/* /home/artic/bin
+	cp $(SCRIPTS)/* /home/artic/.script
 
 $(BINARIES)/help: $(SOURCES)/help.c
-	gcc $(SOURCES)/help.c -o $(BINARIES)/help
-	cp $(BINARIES)/help $(BINARIES)/ayuda
+	gcc $(SOURCES)/help.c -o $(BINARIES)/helpMe
+	cp $(BINARIES)/helpMe $(BINARIES)/ayudame
 
 $(BINARIES)/connectDevice: $(SOURCES)/connectDevice.c
 	gcc $(SOURCES)/connectDevice.c -o $(BINARIES)/connectDevice
-	cp $(BINARIES)/connectDevice $(BINARIES)/conectarDispositivo
+	cp $(BINARIES)/connectDevice $(BINARIES)/conectarDisp
 
 $(BINARIES)/ejectDevice: $(SOURCES)/ejectDevice.c
 	gcc $(SOURCES)/ejectDevice.c -o $(BINARIES)/ejectDevice
-	cp $(BINARIES)/ejectDevice $(BINARIES)/extraerDispositivo
+	cp $(BINARIES)/ejectDevice $(BINARIES)/extraerDisp
 
 $(BINARIES)/info: $(SOURCES)/info.c
 	gcc $(SOURCES)/info.c -o $(BINARIES)/info
